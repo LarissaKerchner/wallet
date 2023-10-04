@@ -70,7 +70,7 @@ function WalletForm() {
             onChange={ handleChange }
           >
             {currencies.map((moeda, index) => (
-              <option key={ index } value={ currency }>
+              <option key={ index } value={ moeda }>
                 {moeda}
               </option>
             ))}
@@ -81,7 +81,7 @@ function WalletForm() {
           <select
             data-testid="method-input"
             name="method"
-            value="method"
+            value={ method }
             onChange={ handleChange }
           >
             <option value="Dinheiro">Dinheiro</option>
@@ -94,7 +94,7 @@ function WalletForm() {
           <select
             data-testid="tag-input"
             name="tag"
-            value="tag"
+            value={ tag }
             onChange={ handleChange }
           >
             <option value="Alimentação">Alimentação</option>
