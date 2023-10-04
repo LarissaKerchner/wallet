@@ -69,16 +69,21 @@ function WalletForm() {
             name="currency"
             onChange={ handleChange }
           >
-            {currencies.map((currency, index) => (
+            {currencies.map((moeda, index) => (
               <option key={ index } value={ currency }>
-                {currency}
+                {moeda}
               </option>
             ))}
           </select>
         </label>
         <label>
           Método de pagamento
-          <select data-testid="method-input" name="method" onChange={ handleChange }>
+          <select
+            data-testid="method-input"
+            name="method"
+            value="method"
+            onChange={ handleChange }
+          >
             <option value="Dinheiro">Dinheiro</option>
             <option value="Cartão de crédito">Cartão de crédito</option>
             <option value="Cartão de débito">Cartão de débito</option>
@@ -86,7 +91,12 @@ function WalletForm() {
         </label>
         <label>
           Categoria da despesa
-          <select data-testid="tag-input" name="tag" onChange={ handleChange }>
+          <select
+            data-testid="tag-input"
+            name="tag"
+            value="tag"
+            onChange={ handleChange }
+          >
             <option value="Alimentação">Alimentação</option>
             <option value="Lazer">Lazer</option>
             <option value="Trabalho">Trabalho</option>
