@@ -14,6 +14,7 @@ function Header() {
   return (
     <div>
       <h3>TrybeWallet</h3>
+      <h5>My wallet</h5>
       <p data-testid="email-field">{email}</p>
       <p data-testid="total-field">{totalExpenses()}</p>
       <p data-testid="header-currency-field">BRL</p>
