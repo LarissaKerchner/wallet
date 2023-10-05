@@ -1,5 +1,5 @@
 import { AnyAction } from 'redux';
-import { CURRENCY_FETCH } from '../actions';
+import { CURRENCY_FETCH, ADD_EXPENSE, DELETE_EXPENSE } from '../actions';
 
 const INITIAL_STATE = {
   currencies: [],
@@ -13,13 +13,16 @@ function walletReducer(state = INITIAL_STATE, action: AnyAction) {
         ...state,
         currencies: action.payload,
       };
-    case 'ADD_EXPENSE':
+    case ADD_EXPENSE:
       return {
         ...state,
         expenses: [...state.expenses, { ...action.payload, id: state.expenses.length }],
       };
-    case 'UPDATE_TOTAL':
-      return state; // fazer o calculo do total
+    case DELETE_EXPENSE:
+      return {
+        ...state,
+        expenses: state.expenses.filter((expense: any) => expense.id !== action.payload),
+      };
     default:
       return state;
   }

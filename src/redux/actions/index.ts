@@ -4,6 +4,8 @@ import { fetchCurrency } from '../../services/APIcurrenry';
 
 export const USER_EMAIL = 'USER_EMAIL';
 export const CURRENCY_FETCH = 'CURRENCY_FETCH';
+export const ADD_EXPENSE = 'ADD_EXPENSE';
+export const DELETE_EXPENSE = 'DELETE_EXPENSE';
 
 export function saveEmail(email: string): ActionEmail {
   return {
@@ -35,3 +37,8 @@ export const apiThunk = () => async (dispatch: Dispatch) => {
   const currencies = Object.keys(response);
   dispatch(currencySuccess(currencies));
 };
+
+export const deleteExpense = (id: number) => ({
+  type: 'DELETE_EXPENSE',
+  payload: id,
+});

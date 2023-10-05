@@ -21,7 +21,8 @@ export type StateType = {
 };
 
 export type Expense = {
-  value: string;
+  id: number;
+  value: number;
   description: string;
   currency: string;
   method: string;
