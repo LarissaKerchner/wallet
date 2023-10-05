@@ -36,7 +36,7 @@ function WalletForm() {
 
   useEffect(() => {
     dispatch(apiThunk());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>

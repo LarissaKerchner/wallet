@@ -20,17 +20,13 @@ export type StateType = {
   wallet: WalletState
 };
 
-export type Currency = {
-  code: string;
-  name: string;
-};
-
 export type Expense = {
   value: string;
   description: string;
   currency: string;
   method: string;
   tag: string;
+  exchangeRates: any;
 };
 
 export type Dispatch = ThunkDispatch<StateType, void, AnyAction>;

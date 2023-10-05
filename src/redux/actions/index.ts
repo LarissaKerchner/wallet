@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import { ActionEmail, Currency, Expense } from '../../types';
+import { ActionEmail } from '../../types';
 import { fetchCurrency } from '../../services/APIcurrenry';
 
 export const USER_EMAIL = 'USER_EMAIL';
@@ -20,10 +20,6 @@ export const currencySuccess = (currencies: string[]) => ({
 export const addExpense = (expense: any) => ({
   type: 'ADD_EXPENSE',
   payload: expense,
-});
-
-export const updateTotal = () => ({
-  type: 'UPDATE_TOTAL',
 });
 
 export const api = (form: any) => {
