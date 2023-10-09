@@ -1,0 +1,14 @@
+.walletContainer {
+  background-color: var(--off-withe);
+  height: 100vh;
+}
+
+.header-form {
+  background-color: var(--off-withe);
+  border-radius: 20px;
+  box-shadow: 0 0 10px var(--gray);
+  height: 35vh;
+  margin: auto;
+  padding: 10px;
+  width: 90%;
+}

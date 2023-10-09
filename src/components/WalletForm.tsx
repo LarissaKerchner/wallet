@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { Dispatch, StateType } from '../types';
 import { api, apiThunk } from '../redux/actions';
 
+import './form.css';
+
 function WalletForm() {
   const dispatch: Dispatch = useDispatch();
   const currencies = useSelector((state: StateType) => state.wallet.currencies);
@@ -40,30 +42,41 @@ function WalletForm() {
 
   return (
     <div>
-      <form>
-        <label>
-          Descrição da despesa
+      <form className="expense-form">
+        <div className="form-group">
+          <label htmlFor="description" className="form-label">
+            Descrição da despesa
+          </label>
           <input
             type="text"
+            id="description"
             name="description"
             value={ description }
             onChange={ handleChange }
             data-testid="description-input"
           />
-        </label>
-        <label>
-          Valor
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="value">
+            Valor
+          </label>
           <input
             type="number"
+            id="value"
             name="value"
             value={ value }
             onChange={ handleChange }
             data-testid="value-input"
           />
-        </label>
-        <label>
-          Moeda
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="currency" className="form-label">
+            Moeda
+          </label>
           <select
+            id="currency"
             data-testid="currency-input"
             value={ currency }
             name="currency"
@@ -75,10 +88,14 @@ function WalletForm() {
               </option>
             ))}
           </select>
-        </label>
-        <label>
-          Método de pagamento
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="method">
+            Método de pagamento
+          </label>
           <select
+            id="method"
             data-testid="method-input"
             name="method"
             value={ method }
@@ -88,10 +105,14 @@ function WalletForm() {
             <option value="Cartão de crédito">Cartão de crédito</option>
             <option value="Cartão de débito">Cartão de débito</option>
           </select>
-        </label>
-        <label>
-          Categoria da despesa
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="tag">
+            Categoria da despesa
+          </label>
           <select
+            id="tag"
             data-testid="tag-input"
             name="tag"
             value={ tag }
@@ -103,8 +124,14 @@ function WalletForm() {
             <option value="Transporte">Transporte</option>
             <option value="Saúde">Saúde</option>
           </select>
-        </label>
-        <button type="button" onClick={ handleAddExpense }>Adicionar despesa</button>
+        </div>
+
+        <button
+          type="button"
+          onClick={ handleAddExpense }
+        >
+          Adicionar despesa
+        </button>
       </form>
     </div>
   );

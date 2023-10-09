@@ -1,0 +1,26 @@
+.hearderContainer {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.titulo {
+  color: var(--verde-escuro);
+  text-align: center;
+}
+
+.titulo h3 , .titulo h4 {
+  font-size: 20px;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.coin {
+  display: flex;
+  justify-content: center;
+}
+
+.coin p {
+  margin-left: 5px;
+}
+

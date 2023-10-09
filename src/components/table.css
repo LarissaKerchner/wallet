@@ -1,0 +1,23 @@
+/* CSS para estilizar a tabela */
+.table-container {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  color: var(--verde-escuro);
+  width: 100%;
+}
+
+th {
+  background-color: var(--off-withe);
+  border-bottom: 1px solid #ddd; /* Linha separadora entre os cabeçalhos */
+  padding: 8px;
+  text-align: center;
+}
+
+td {
+  padding: 8px;
+  text-align: center;
+}

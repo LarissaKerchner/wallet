@@ -2,6 +2,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { StateType } from '../types';
 import { deleteExpense } from '../redux/actions';
 
+import './table.css';
+
 function Table() {
   const { expenses } = useSelector((state: StateType) => state.wallet);
   const dispatch = useDispatch();

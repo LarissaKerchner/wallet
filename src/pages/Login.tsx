@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { saveEmail } from '../redux/actions';
 
+import './login.css';
+
 function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -19,32 +21,41 @@ function Login() {
   }
 
   return (
-    <form onSubmit={ handleSubmitLogin }>
-      <h1>TrybeWallet</h1>
-      <input
-        type="email"
-        name="email"
-        value={ email }
-        placeholder="Email"
-        onChange={ (event) => setEmail(event.target.value) }
-        data-testid="email-input"
-      />
-      <input
-        type="password"
-        name="password"
-        placeholder="Senha"
-        value={ password }
-        onChange={ (event) => setPassword(event.target.value) }
-        data-testid="password-input"
-      />
-      <button
-        type="submit"
-        disabled={ isValidate }
-      >
-        Entrar
+    <div className="paginaInicial">
+      <form onSubmit={ handleSubmitLogin } className="formContainer">
+        <section className="sectionLogin">
+          <h1 className="custom-heading">
+            Trybe
+            <span>Wallet</span>
+          </h1>
+          <input
+            type="email"
+            name="email"
+            value={ email }
+            placeholder="Email"
+            onChange={ (event) => setEmail(event.target.value) }
+            className="inputLogin"
+            data-testid="email-input"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Senha"
+            value={ password }
+            onChange={ (event) => setPassword(event.target.value) }
+            className="inputLogin"
+            data-testid="password-input"
+          />
+          <button
+            type="submit"
+            disabled={ isValidate }
+          >
+            Entrar
 
-      </button>
-    </form>
+          </button>
+        </section>
+      </form>
+    </div>
   );
 }
 

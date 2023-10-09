@@ -1,0 +1,35 @@
+.expense-form {
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-top: 10px;
+  text-align: center;
+  width: 50vh;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  height: 15px;
+  padding: 5px;
+}
+
+.form-group select {
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  height: 25px;
+  padding: 5px;
+}

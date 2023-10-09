@@ -1,0 +1,67 @@
+.paginaInicial {
+  background-image: url('https://img.freepik.com/fotos-gratis/montao-de-moedas-de-chocolate_23-2147748111.jpg?w=740&t=st=1696783541~exp=1696784141~hmac=04b0052dc50f78663f4aca8c7e8d5d83de1f146656a0e198e7490f160829f50f');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.formContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: center;
+  margin: auto;
+}
+
+.sectionLogin {
+  align-items: center;
+  background-color: rgba(247, 252, 248, 0.493);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 48vh;
+  padding: 50px;
+}
+
+.inputLogin {
+  border: none;
+  height: 1.3rem;
+  margin-bottom: 5px;
+  width: 20rem;
+}
+
+.inputLogin::placeholder {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.custom-heading {
+  color: white;
+  font-size: 30px;
+  position: relative;
+}
+
+.custom-heading span {
+  color: var(--verde-escuro);
+}
+
+button {
+  background-color: var(--verde-claro);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 2rem;
+  margin-top: 1rem;
+  width: 10rem;
+}
+
+button:enabled {
+  background-color: var(--verde-escuro);
+}
+

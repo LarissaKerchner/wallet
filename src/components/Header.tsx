@@ -1,5 +1,8 @@
 import { useSelector } from 'react-redux';
+import { FaUser, FaCoins } from 'react-icons/fa';
 import { StateType } from '../types';
+
+import './header.css';
 
 function Header() {
   const { email } = useSelector((state: StateType) => state.user);
@@ -12,12 +15,24 @@ function Header() {
   }
 
   return (
-    <div>
-      <h3>TrybeWallet</h3>
-      <h5>My wallet</h5>
-      <p data-testid="email-field">{email}</p>
-      <p data-testid="total-field">{totalExpenses()}</p>
-      <p data-testid="header-currency-field">BRL</p>
+    <div className="hearderContainer">
+      <div className="titulo">
+        <h3>TrybeWallet</h3>
+        <h4>My wallet</h4>
+      </div>
+      <div className="coin">
+        <p data-testid="total-field">
+          <FaCoins />
+          {' '}
+          {totalExpenses()}
+        </p>
+        <p data-testid="header-currency-field">BRL</p>
+      </div>
+      <p data-testid="email-field">
+        <FaUser />
+        {' '}
+        {email}
+      </p>
     </div>
   );
 }
